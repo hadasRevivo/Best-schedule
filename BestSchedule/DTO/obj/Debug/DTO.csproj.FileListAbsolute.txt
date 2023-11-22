@@ -1,0 +1,12 @@
+C:\Project\BestSchedule\DTO\bin\Debug\DTO.dll.config
+C:\Project\BestSchedule\DTO\bin\Debug\DTO.dll
+C:\Project\BestSchedule\DTO\bin\Debug\DTO.pdb
+C:\Project\BestSchedule\DTO\bin\Debug\EntityFramework.dll
+C:\Project\BestSchedule\DTO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Project\BestSchedule\DTO\bin\Debug\EntityFramework.xml
+C:\Project\BestSchedule\DTO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Project\BestSchedule\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Project\BestSchedule\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Project\BestSchedule\DTO\obj\Debug\DTO.csproj.CopyComplete
+C:\Project\BestSchedule\DTO\obj\Debug\DTO.dll
+C:\Project\BestSchedule\DTO\obj\Debug\DTO.pdb

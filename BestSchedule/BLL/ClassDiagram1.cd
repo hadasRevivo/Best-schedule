@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BLL.ConstraintsTaskBLL">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConstraintsTaskBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.HoursNotActivityofRouteConverter">
+    <Position X="0.5" Y="6.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Converter\HoursNotActivityofRouteConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.CustomerBLL">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIAAAAAAAAAAAAAAAACAAAAAAAAAAQAIAAQAgABEAA=</HashCode>
+      <FileName>CustomerBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.DistancsService" Collapsed="true">
+    <Position X="12.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>DistancsService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.LoginBLL">
+    <Position X="8.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>LoginBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.PriorityQueues&lt;T&gt;">
+    <Position X="2.75" Y="0.5" Width="1.75" />
+    <NestedTypes>
+      <Class Name="BLL.PriorityQueues&lt;T&gt;.Node" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PriiorityQueue.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AABAAAACAAAAAoQAAABCAAQAAAABBAAAgAAAAACAIAA=</HashCode>
+      <FileName>PriiorityQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.RouteBLL">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAIAAQAAAAAAABAAAAAAYAAAAAA=</HashCode>
+      <FileName>RouteBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Vertex">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAQAAAAAQAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>TaskInRouteAlgoritm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Points">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAACAAEAAAAAAAAAAAAAABAAACAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>TaskInRouteAlgoritm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.TaskInRouteAlgoritm">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YARABgRAGAAAQQCABQAAkILCBCAAAAAEAQAQABBAEKE=</HashCode>
+      <FileName>TaskInRouteAlgoritm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.TasksBLL">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>TasksBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.TasksToCustomersBLL">
+    <Position X="0.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TasksToCustomersBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Converter.ConstraintsTaskConverter">
+    <Position X="6.5" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Converter\ConstraintsTaskConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Converter.CustomersConverter">
+    <Position X="3.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converter\CustomersConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Converter.RouteConverter">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAAAAAAAA=</HashCode>
+      <FileName>Converter\RouteConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Converter.TasksConverter">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Converter\TasksConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Converter.TasksCreatedConverter">
+    <Position X="0.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converter\TasksCreatedConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Converter.TasksToCustomersConverter">
+    <Position X="0.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Converter\TasksToCustomersConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BLL.enumDestanaiton" Collapsed="true">
+    <Position X="3" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACA=</HashCode>
+      <FileName>TaskInRouteAlgoritm.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

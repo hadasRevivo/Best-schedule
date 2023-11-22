@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BestScheduleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ConstraintsTask">
+    <Key>
+      <PropertyRef Name="IdConstraintTask" />
+    </Key>
+    <Property Name="IdConstraintTask" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTasksToCustomers" Type="int" Nullable="false" />
+    <Property Name="DateToConstraint" Type="datetime" Nullable="false" />
+    <Property Name="DateEnd" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="customers">
+    <Key>
+      <PropertyRef Name="IdCustomers" />
+    </Key>
+    <Property Name="IdCustomers" Type="nvarchar" MaxLength="9" Nullable="false" />
+    <Property Name="NameCustomers" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="EmailCustomers" Type="nchar" MaxLength="40" Nullable="false" />
+    <Property Name="AddressCustomers" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Pass" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HoursNotActivityofRoute">
+    <Key>
+      <PropertyRef Name="IdHoursNotActivityofRoute" />
+    </Key>
+    <Property Name="IdHoursNotActivityofRoute" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="IdRoute" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Route">
+    <Key>
+      <PropertyRef Name="IdRoute" />
+    </Key>
+    <Property Name="IdRoute" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateToRoute" Type="datetime" />
+    <Property Name="IdCustomers" Type="nvarchar" MaxLength="9" Nullable="false" />
+    <Property Name="StartDateToRoute" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="nameRoute" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TaskInRoute">
+    <Key>
+      <PropertyRef Name="IdTaskInRoute" />
+    </Key>
+    <Property Name="IdTaskInRoute" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTasksToCustomers" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tasks">
+    <Key>
+      <PropertyRef Name="IdTasks" />
+    </Key>
+    <Property Name="IdTasks" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameTasks" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="TaskLength" Type="float" Nullable="false" />
+    <Property Name="AddressTasks" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TasksToCustomers">
+    <Key>
+      <PropertyRef Name="IdTasksToCustomers" />
+    </Key>
+    <Property Name="IdTasksToCustomers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTasks" Type="int" Nullable="false" />
+    <Property Name="IdCustomers" Type="nvarchar" MaxLength="9" Nullable="false" />
+    <Property Name="IdRoute" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Constrain__IdTas__29221CFB">
+    <End Role="TasksToCustomers" Type="Self.TasksToCustomers" Multiplicity="1" />
+    <End Role="ConstraintsTask" Type="Self.ConstraintsTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TasksToCustomers">
+        <PropertyRef Name="IdTasksToCustomers" />
+      </Principal>
+      <Dependent Role="ConstraintsTask">
+        <PropertyRef Name="IdTasksToCustomers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoursNotA__IdRou__607251E5">
+    <End Role="Route" Type="Self.Route" Multiplicity="1" />
+    <End Role="HoursNotActivityofRoute" Type="Self.HoursNotActivityofRoute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Route">
+        <PropertyRef Name="IdRoute" />
+      </Principal>
+      <Dependent Role="HoursNotActivityofRoute">
+        <PropertyRef Name="IdRoute" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Route__IdCustome__5EBF139D">
+    <End Role="customers" Type="Self.customers" Multiplicity="1" />
+    <End Role="Route" Type="Self.Route" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="IdCustomers" />
+      </Principal>
+      <Dependent Role="Route">
+        <PropertyRef Name="IdCustomers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TaskInRou__IdTas__4F47C5E3">
+    <End Role="TasksToCustomers" Type="Self.TasksToCustomers" Multiplicity="1" />
+    <End Role="TaskInRoute" Type="Self.TaskInRoute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TasksToCustomers">
+        <PropertyRef Name="IdTasksToCustomers" />
+      </Principal>
+      <Dependent Role="TaskInRoute">
+        <PropertyRef Name="IdTasksToCustomers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TasksToCu__IdCus__60A75C0F">
+    <End Role="customers" Type="Self.customers" Multiplicity="1" />
+    <End Role="TasksToCustomers" Type="Self.TasksToCustomers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="IdCustomers" />
+      </Principal>
+      <Dependent Role="TasksToCustomers">
+        <PropertyRef Name="IdCustomers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TasksToCu__IdRou__6E01572D">
+    <End Role="Route" Type="Self.Route" Multiplicity="1" />
+    <End Role="TasksToCustomers" Type="Self.TasksToCustomers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Route">
+        <PropertyRef Name="IdRoute" />
+      </Principal>
+      <Dependent Role="TasksToCustomers">
+        <PropertyRef Name="IdRoute" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TasksToCu__IdTas__5FB337D6">
+    <End Role="Tasks" Type="Self.Tasks" Multiplicity="1" />
+    <End Role="TasksToCustomers" Type="Self.TasksToCustomers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tasks">
+        <PropertyRef Name="IdTasks" />
+      </Principal>
+      <Dependent Role="TasksToCustomers">
+        <PropertyRef Name="IdTasks" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BestScheduleModelStoreContainer">
+    <EntitySet Name="ConstraintsTask" EntityType="Self.ConstraintsTask" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoursNotActivityofRoute" EntityType="Self.HoursNotActivityofRoute" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Route" EntityType="Self.Route" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaskInRoute" EntityType="Self.TaskInRoute" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TasksToCustomers" EntityType="Self.TasksToCustomers" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Constrain__IdTas__29221CFB" Association="Self.FK__Constrain__IdTas__29221CFB">
+      <End Role="TasksToCustomers" EntitySet="TasksToCustomers" />
+      <End Role="ConstraintsTask" EntitySet="ConstraintsTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoursNotA__IdRou__607251E5" Association="Self.FK__HoursNotA__IdRou__607251E5">
+      <End Role="Route" EntitySet="Route" />
+      <End Role="HoursNotActivityofRoute" EntitySet="HoursNotActivityofRoute" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Route__IdCustome__5EBF139D" Association="Self.FK__Route__IdCustome__5EBF139D">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="Route" EntitySet="Route" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TaskInRou__IdTas__4F47C5E3" Association="Self.FK__TaskInRou__IdTas__4F47C5E3">
+      <End Role="TasksToCustomers" EntitySet="TasksToCustomers" />
+      <End Role="TaskInRoute" EntitySet="TaskInRoute" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TasksToCu__IdCus__60A75C0F" Association="Self.FK__TasksToCu__IdCus__60A75C0F">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="TasksToCustomers" EntitySet="TasksToCustomers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TasksToCu__IdRou__6E01572D" Association="Self.FK__TasksToCu__IdRou__6E01572D">
+      <End Role="Route" EntitySet="Route" />
+      <End Role="TasksToCustomers" EntitySet="TasksToCustomers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TasksToCu__IdTas__5FB337D6" Association="Self.FK__TasksToCu__IdTas__5FB337D6">
+      <End Role="Tasks" EntitySet="Tasks" />
+      <End Role="TasksToCustomers" EntitySet="TasksToCustomers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

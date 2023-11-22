@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f69b38ac13194a669bbb8da30e336b38" Name="Diagram1" ZoomLevel="75">
+        <EntityTypeShape EntityType="BestScheduleModel.ConstraintsTask" Width="1.5" PointX="8.375" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BestScheduleModel.customers" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BestScheduleModel.HoursNotActivityofRoute" Width="2.375" PointX="5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BestScheduleModel.Route" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BestScheduleModel.TaskInRoute" Width="2.125" PointX="11.125" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BestScheduleModel.Tasks" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BestScheduleModel.TasksToCustomers" Width="2" PointX="8" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="BestScheduleModel.FK__Constrain__IdTas__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="BestScheduleModel.FK__Route__IdCustome__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="BestScheduleModel.FK__TasksToCu__IdCus__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="BestScheduleModel.FK__HoursNotA__IdRou__607251E5" ManuallyRouted="false" />
+        <AssociationConnector Association="BestScheduleModel.FK__TasksToCu__IdRou__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="BestScheduleModel.FK__TaskInRou__IdTas__4F47C5E3" ManuallyRouted="false" />
+        <AssociationConnector Association="BestScheduleModel.FK__TasksToCu__IdTas__5FB337D6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BestScheduleModelStoreContainer" CdmEntityContainer="BestScheduleEntities">
+    <EntitySetMapping Name="ConstraintsTask">
+      <EntityTypeMapping TypeName="BestScheduleModel.ConstraintsTask">
+        <MappingFragment StoreEntitySet="ConstraintsTask">
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="IdConstraintTask" ColumnName="IdConstraintTask" />
+          <ScalarProperty Name="IdTasksToCustomers" ColumnName="IdTasksToCustomers" />
+          <ScalarProperty Name="DateToConstraint" ColumnName="DateToConstraint" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="BestScheduleModel.customers">
+        <MappingFragment StoreEntitySet="customers">
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="IdCustomers" ColumnName="IdCustomers" />
+          <ScalarProperty Name="NameCustomers" ColumnName="NameCustomers" />
+          <ScalarProperty Name="EmailCustomers" ColumnName="EmailCustomers" />
+          <ScalarProperty Name="AddressCustomers" ColumnName="AddressCustomers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoursNotActivityofRoute">
+      <EntityTypeMapping TypeName="BestScheduleModel.HoursNotActivityofRoute">
+        <MappingFragment StoreEntitySet="HoursNotActivityofRoute">
+          <ScalarProperty Name="IdHoursNotActivityofRoute" ColumnName="IdHoursNotActivityofRoute" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="IdRoute" ColumnName="IdRoute" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Route">
+      <EntityTypeMapping TypeName="BestScheduleModel.Route">
+        <MappingFragment StoreEntitySet="Route">
+          <ScalarProperty Name="nameRoute" ColumnName="nameRoute" />
+          <ScalarProperty Name="IdRoute" ColumnName="IdRoute" />
+          <ScalarProperty Name="DateToRoute" ColumnName="DateToRoute" />
+          <ScalarProperty Name="IdCustomers" ColumnName="IdCustomers" />
+          <ScalarProperty Name="StartDateToRoute" ColumnName="StartDateToRoute" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskInRoute">
+      <EntityTypeMapping TypeName="BestScheduleModel.TaskInRoute">
+        <MappingFragment StoreEntitySet="TaskInRoute">
+          <ScalarProperty Name="IdTaskInRoute" ColumnName="IdTaskInRoute" />
+          <ScalarProperty Name="IdTasksToCustomers" ColumnName="IdTasksToCustomers" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="BestScheduleModel.Tasks">
+        <MappingFragment StoreEntitySet="Tasks">
+          <ScalarProperty Name="IdTasks" ColumnName="IdTasks" />
+          <ScalarProperty Name="NameTasks" ColumnName="NameTasks" />
+          <ScalarProperty Name="TaskLength" ColumnName="TaskLength" />
+          <ScalarProperty Name="AddressTasks" ColumnName="AddressTasks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TasksToCustomers">
+      <EntityTypeMapping TypeName="BestScheduleModel.TasksToCustomers">
+        <MappingFragment StoreEntitySet="TasksToCustomers">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="IdTasksToCustomers" ColumnName="IdTasksToCustomers" />
+          <ScalarProperty Name="IdTasks" ColumnName="IdTasks" />
+          <ScalarProperty Name="IdCustomers" ColumnName="IdCustomers" />
+          <ScalarProperty Name="IdRoute" ColumnName="IdRoute" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
